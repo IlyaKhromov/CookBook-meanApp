@@ -1,0 +1,26 @@
+<div class="container">
+	<div class="page-header">
+  		<h1>Add New Recipe</h1>
+  	</div>
+	<div class="row">
+	<div class="col-md-6">
+		<form (ngSubmit)="saveRecipe()" #recipeForm="ngForm">
+			<div class="form-group">
+		      <label for="name">Title</label>
+		      <input type="text" class="form-control" [(ngModel)]="recipe.title" placeholder="Enter recipe title here" name="title" required >
+		    </div>
+	        <div class="form-group">
+	          <label for="name">Description</label>
+	          <textarea type="text" class="form-control" [(ngModel)]="recipe.description" placeholder="Add recipe description here" name="description" rows="6" required></textarea>
+	        </div>
+	        <div class="form-group">
+	          <label for="name">Ingredients</label>
+	          <textarea type="text" class="form-control" [(ngModel)]="recipe.ingredients" placeholder="Add recipe ingredients here" name="ingredients" rows="6" required></textarea>
+	        </div>
+	        <div class="form-group">
+	          <button type="submit" class="btn btn-success" [disabled]="!recipeForm.form.valid">Add</button>
+	        </div>
+	  	</form>
+	</div>
+	</div>
+</div>
